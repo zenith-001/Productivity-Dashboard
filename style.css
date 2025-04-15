@@ -40,20 +40,22 @@ body {
     width: 260px;
     padding: 30px 20px;
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
     gap: 20px;
 }
-
+/* Sidebar styles */
 .sidebar {
     width: 260px;
     background-color: var(--sidebar-bg);
     color: var(--sidebar-text);
-    padding: 30px 20px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    justify-content: space-between;
     position: fixed;
     height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .sidebar h2 {
@@ -63,26 +65,54 @@ body {
 
 .sidebar ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .sidebar li {
-    margin-bottom: 12px;
+    padding: 10px 15px;
+    color: var(--sidebar-text);
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: transform 0.2s;
+    border-radius: 6px;
+    transition: transform 0.2s, background-color 0.3s;
 }
 
 .sidebar li:hover {
     transform: translateX(5px);
     color: var(--accent);
+    background-color: rgba(78, 137, 255, 0.1);
 }
 
-.sidebar li.last{
-    margin-bottom: 0;
+/* Separator style */
+.sidebar-separator {
+    height: 1px;
+    background: var(--accentDim);
+    margin: 20px 0;
+    opacity: 0.5;
 }
 
+/* Add Projects button styles */
+.add-project-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.add-project-btn:hover {
+    background: #3a6fd1;
+    transform: translateY(-2px);
+}
+
+.add-project-btn i {
+    margin-right: 8px;
+}
 .main {
     flex: 1;
     padding: 30px;

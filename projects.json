@@ -28,35 +28,5 @@
     "cpanel": "https://s782.bom1.mysecurecloudhost.com:2083/cpsess1329972672/frontend/jupiter/index.html",
     "git": "https://github.com/zenith-001/rageni-resort",
     "folderPath": "C:/xampp/htdocs/codes/rageni-resort"
-  },
-    {
-    "name": "Karuna Clinic",
-    "author": "Ishwar Sharma Kandel",
-    "url": "https://karunaclinic.com.np",
-    "phone": "98012345677",
-    "filemanager": "https://s782.bom1.mysecurecloudhost.com:2083/cpsess1329972672/frontend/jupiter/filemanager/index.html?login=1&post_login=19385090195696",
-    "cpanel": "https://s782.bom1.mysecurecloudhost.com:2083/cpsess1329972672/frontend/jupiter/index.html",
-    "git": "https://github.com/zenith-001/karuna-clinic",
-    "folderPath": "C:/xampp/htdocs/codes/karuna-clinic"
-  },
-  {
-    "name": "Kushma Art Project",
-    "author": "Rk Adipta Giri",
-    "url": "https://kushmaartproject.com.np",
-    "phone": "9861234567",
-    "filemanager": "https://s782.bom1.mysecurecloudhost.com:2083/cpsess1329972672/frontend/jupiter/filemanager/index.html?login=1&post_login=19385090195696",
-    "cpanel": "https://s782.bom1.mysecurecloudhost.com:2083/cpsess1329972672/frontend/jupiter/index.html",
-    "git": "https://github.com/zenith-001/Kushma-Art-Project",
-    "folderPath": "C:/xampp/htdocs/codes/kushma-art-project"
-  },
-  {
-    "name": "Rageni Resort",
-    "author": "Naresh Kandel",
-    "url": "https://rageniresort.com.np",
-    "phone": "9861234567",
-    "filemanager": "https://s782.bom1.mysecurecloudhost.com:2083/cpsess1329972672/frontend/jupiter/filemanager/index.html?login=1&post_login=19385090195696",
-    "cpanel": "https://s782.bom1.mysecurecloudhost.com:2083/cpsess1329972672/frontend/jupiter/index.html",
-    "git": "https://github.com/zenith-001/rageni-resort",
-    "folderPath": "C:/xampp/htdocs/codes/rageni-resort"
   }
 ]

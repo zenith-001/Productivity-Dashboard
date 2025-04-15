@@ -40,39 +40,46 @@
     <div class="container">
         <div class="sidebar-placeholder"></div>
         <div class="sidebar">
-            <h2><i class="fas fa-tachometer-alt"></i> Dashboard</h2>
-            <p>Quick Links:</p>
-            <ul id="project-list">
-                <li onclick="location.href='https://www.github.com'"><i class="fa-brands fa-github"></i> Github</li>
-                <li onclick="location.href='https://www.stackoverflow.com'"><i class="fa-brands fa-stack-overflow"></i>
-                    Stackoverflow</li>
-                <li onclick="location.href='https://www.fontawesome.com'"><i class="fa-brands fa-font-awesome"></i>
-                    Fontawesome</li>
-                <li onclick="location.href='https://fonts.google.com'"><i class="fa-regular fa-font-case"></i> Google
-                    Fonts</li>
-                <li onclick="location.href='https://www.chatgpt.com'"><i class="fa-light fa-brain-circuit"></i> ChatGPT
-                </li>
-                <li onclick="location.href='https://chat.deepseek.com'"><i class="fa-light fa-microchip"></i> Deepseek
-                </li>
-                <li onclick="location.href='https://www.photopea.com'"><i class="fa-regular fa-image"></i> Photopea</li>
-                <li onclick="location.href='https://www.monkeytype.com'"><i class="fa-regular fa-keyboard"></i>
-                    Monkeytype</li>
-                <li onclick="location.href='https://www.register.com.np'"><i class="fa-regular fa-globe"></i>
-                    Mercantile Domain</li>
-                <li onclick="location.href='https://www.himalayanhost.com'"><i class="fa-regular fa-globe"></i>
-                    Himalayan Host</li>
-                <li onclick="location.href='folder.php?path='+encodeURIComponent('C:/xampp/htdocs')"><i
-                        class="fa-regular fa-folder"></i> htdocs</li>
-                <li onclick="location.href='folder.php?code='+encodeURIComponent('C:/xampp/htdocs/codes')"><i
-                        class="fa-regular fa-folder"></i> Vscode</li>
-                <li
-                    onclick="copyVar(boiler_template);showNotification(`<i class='fa-regular fa-copy'></i> Copied To Clipboard`);">
-                    <i class="fa-regular fa-copy"></i> HTML
-                    Boiler
-                </li>
-                <li onclick="location.href='add.php'" class="last"><i
-                        class="fa-regular fa-plus"></i>&nbsp;Add Projects</li>
-            </ul>
+            <div>
+                <h2><i class="fas fa-tachometer-alt"></i> Dashboard</h2>
+                <ul id="project-list">
+                    <li onclick="location.href='https://www.github.com'"><i class="fa-brands fa-github"></i> Github</li>
+                    <li onclick="location.href='https://www.stackoverflow.com'"><i
+                            class="fa-brands fa-stack-overflow"></i> Stackoverflow</li>
+                    <li onclick="location.href='https://www.fontawesome.com'"><i class="fa-brands fa-font-awesome"></i>
+                        Fontawesome</li>
+                    <li onclick="location.href='https://fonts.google.com'"><i class="fa-regular fa-font-case"></i>
+                        Google Fonts</li>
+                    <li onclick="location.href='https://www.chatgpt.com'"><i class="fa-light fa-brain-circuit"></i>
+                        ChatGPT</li>
+                    <li onclick="location.href='https://chat.deepseek.com'"><i class="fa-light fa-microchip"></i>
+                        Deepseek</li>
+                    <li onclick="location.href='https://www.photopea.com'"><i class="fa-regular fa-image"></i> Photopea
+                    </li>
+                    <li onclick="location.href='https://www.monkeytype.com'"><i class="fa-regular fa-keyboard"></i>
+                        Monkeytype</li>
+                    <li onclick="location.href='https://www.register.com.np'"><i class="fa-regular fa-globe"></i>
+                        Mercantile Domain</li>
+                    <li onclick="location.href='https://www.himalayanhost.com'"><i class="fa-regular fa-globe"></i>
+                        Himalayan Host</li>
+                    <li onclick="location.href='folder.php?path='+encodeURIComponent('C:/xampp/htdocs')"><i
+                            class="fa-regular fa-folder"></i> htdocs</li>
+                    <li onclick="location.href='folder.php?code='+encodeURIComponent('C:/xampp/htdocs/codes')"><i
+                            class="fa-regular fa-folder"></i> Vscode</li>
+                    <li
+                        onclick="copyVar(boiler_template);showNotification(`<i class='fa-regular fa-copy'></i> Copied To Clipboard`);">
+                        <i class="fa-regular fa-copy"></i> HTML Boiler
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Separator -->
+            <div class="sidebar-separator"></div>
+
+            <!-- Add Projects Button -->
+            <a href="add.php" class="add-project-btn">
+                <i class="fa-regular fa-plus"></i> Add Projects
+            </a>
         </div>
         <div class="main">
             <div class="header">
