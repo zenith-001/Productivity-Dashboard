@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Dashboard</title>
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-duotone-thin.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-duotone-solid.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-duotone-regular.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-duotone-light.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-thin.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-solid.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-regular.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-light.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone-thin.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone-regular.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone-light.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+    </style>
+</head>
+
+<body data-theme="light">
+
+    <div id="notification" class="notification">
+        <button class="close-btn" onclick="dismissNotification()">×</button>
+        <div>This is a cool notification popup!</div>
+        <div class="countdown-bar"></div>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            <h2><i class="fas fa-tachometer-alt"></i> Dashboard</h2>
+            <p>Quick Links:</p>
+            <ul id="project-list">
+                <li onclick="location.href='https://www.github.com'"><i class="fa-brands fa-github"></i> Github</li>
+                <li onclick="location.href='https://www.stackoverflow.com'"><i class="fa-brands fa-stack-overflow"></i>
+                    Stackoverflow</li>
+                <li onclick="location.href='https://www.fontawesome.com'"><i class="fa-brands fa-font-awesome"></i>
+                    Fontawesome</li>
+                <li onclick="location.href='https://fonts.google.com'"><i class="fa-regular fa-font-case"></i> Google
+                    Fonts</li>
+                <li onclick="location.href='https://www.chatgpt.com'"><i class="fa-light fa-brain-circuit"></i> ChatGPT
+                </li>
+                <li onclick="location.href='https://chat.deepseek.com'"><i class="fa-light fa-microchip"></i> Deepseek
+                </li>
+                <li onclick="location.href='https://www.photopea.com'"><i class="fa-regular fa-image"></i> Photopea</li>
+                <li onclick="location.href='https://www.monkeytype.com'"><i class="fa-regular fa-keyboard"></i>
+                    Monkeytype</li>
+                <li onclick="location.href='https://www.register.com.np'"><i class="fa-regular fa-globe"></i>
+                    Mercantile Domain</li>
+                <li onclick="location.href='https://www.himalayanhost.com'"><i class="fa-regular fa-globe"></i>
+                    Himalayan Host</li>
+                <li onclick="location.href='folder.php?path='+encodeURIComponent('C:/xampp/htdocs')"><i
+                        class="fa-regular fa-folder"></i> htdocs</li>
+                <li onclick="location.href='folder.php?code='+encodeURIComponent('C:/xampp/htdocs/codes')"><i
+                        class="fa-regular fa-folder"></i> Vscode</li>
+                <li
+                    onclick="copyVar(boiler_template);showNotification(`<i class='fa-regular fa-copy'></i> Copied To Clipboard`);">
+                    <i class="fa-regular fa-copy"></i> HTML
+                    Boiler</li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="header">
+                <h2><i class="fas fa-tasks"></i> Project Manager</h2>
+                <div>
+                    <span class="theme-switcher" onclick="toggleTheme()">
+                        <i id="theme-icon" class="fas fa-sun-bright"></i>
+                    </span>
+                    <span style="margin-left: 10px;"><i class="fas fa-user"></i>&nbsp;Zenith</span>
+                </div>
+            </div>
+            <div class="grid" id="todo-grid"></div>
+        </div>
+    </div>
+    <script src="script.js" type="text/javascript"></script>
+</body>
+
+</html>
