@@ -36,6 +36,14 @@ body {
     height: 100vh;
 }
 
+.sidebar-placeholder{
+    width: 260px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .sidebar {
     width: 260px;
     background-color: var(--sidebar-bg);
@@ -44,6 +52,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    position: fixed;
+    height: 100%;
 }
 
 .sidebar h2 {
@@ -67,6 +77,10 @@ body {
 .sidebar li:hover {
     transform: translateX(5px);
     color: var(--accent);
+}
+
+.sidebar li.last{
+    margin-bottom: 0;
 }
 
 .main {

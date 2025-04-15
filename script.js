@@ -35,21 +35,49 @@ const boiler_template = `
 const todoGrid = document.getElementById('todo-grid');
 
 
-const initialProjects = [
-    {
-        name: "Kushma Art Project",
-        author: "Rk Adipta Giri",
-        url: "https://kushmaartproject.com.np",
-        phone: "9861234567",
-        filemanager: "https://example.com/filemanager",
-        cpanel: "https://example.com/cpanel",
-        git: "https://github.com",
-        folderPath: "C:/Users/"
-    }
-];
-initialProjects.forEach(project => {
-    addCard(project);
-});
+// const initialProjects = [
+//     {
+//         name: "Kushma Art Project",
+//         author: "Rk Adipta Giri",
+//         url: "https://kushmaartproject.com.np",
+//         phone: "9861234567",
+//         filemanager: "https://example.com/filemanager",
+//         cpanel: "https://example.com/cpanel",
+//         git: "https://github.com",
+//         folderPath: "C:/Users/"
+//     }
+// ];
+// Fetch projects from the JSON file
+fetch('projects.json')
+    .then(response => response.json())
+    .then(projects => {
+        projects.forEach(project => {
+            addCard(project);
+        });
+    })
+    .catch(error => console.error("Error fetching projects:", error));
+
+// Function to create a card for a project
+function addCard(project) {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `
+        <h4>${project.name}</h4>
+        <p><i class="fa-regular fa-id-card"></i> ${project.author}</p>
+        <p><i class="fa-regular fa-phone"></i> ${project.phone}</p>
+        <button onclick="window.open('${project.url}')"><i class="fa-light fa-globe"></i> View Site</button>
+        <button onclick="window.open('${project.filemanager}')"><i class="fa-light fa-table-tree"></i> File Manager</button>
+        <button onclick="window.open('${project.git}')"><i class="fa-brands fa-github"></i> GitHub</button>
+        <button onclick="window.open('${project.cpanel}')"><i class="fa-light fa-gear"></i> cPanel</button>
+        <button onclick="location.href = 'folder.php?path=${encodeURIComponent(project.folderPath)}'"><i class="fa-light fa-folder"></i> Open Folder</button>
+    `;
+    document.getElementById('todo-grid').appendChild(card);
+}
+
+
+// initialProjects.forEach(project => {
+//     addCard(project);
+// });
 
 
 function addCard(project) {
