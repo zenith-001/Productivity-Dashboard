@@ -136,28 +136,6 @@ body {
     background-color: #3e70d1;
 }
 
-.add-project {
-    margin-top: 30px;
-    display: flex;
-    gap: 10px;
-}
-
-.add-project input {
-    padding: 10px;
-    flex: 1;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-}
-
-.add-project button {
-    padding: 10px 15px;
-    border-radius: 8px;
-    background-color: var(--accent);
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
 .theme-switcher {
     cursor: pointer;
     font-size: 1.1rem;
