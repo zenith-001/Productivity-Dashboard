@@ -6,6 +6,11 @@
     --sidebar-text: white;
     --accent: #4e89ff;
     --accentDim: #7ca5f8;
+
+    /* Added for consistency and readability */
+    --transition-speed: 0.3s;
+    --border-radius: 8px;
+    --shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 [data-theme="dark"] {
@@ -18,25 +23,43 @@
     --accentDim: #8cb3ff;
 }
 
-* {
+*,
+::before,
+::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Base font improvements */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
-    transition: background-color 0.3s, color 0.3s;
+    line-height: 1.6;
+    font-size: 16px;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:focus,
+button:focus {
+    outline: 2px dashed var(--accent);
+    outline-offset: 3px;
+}
+
+/* Flex container */
 .container {
     display: flex;
     height: 100vh;
 }
 
-.sidebar-placeholder{
+/* Keep this unchanged as per instruction */
+.sidebar-placeholder {
     width: 260px;
     padding: 30px 20px;
     display: flex;
@@ -44,7 +67,8 @@ body {
     flex-direction: column;
     gap: 20px;
 }
-/* Sidebar styles */
+
+/* Sidebar */
 .sidebar {
     width: 260px;
     background-color: var(--sidebar-bg);
@@ -55,7 +79,6 @@ body {
     position: fixed;
     height: 100%;
     padding: 20px;
-    box-sizing: border-box;
 }
 
 .sidebar h2 {
@@ -65,16 +88,14 @@ body {
 
 .sidebar ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
 .sidebar li {
     padding: 10px 15px;
+    border-radius: var(--border-radius);
     color: var(--sidebar-text);
     cursor: pointer;
-    border-radius: 6px;
-    transition: transform 0.2s, background-color 0.3s;
+    transition: transform var(--transition-speed), background-color var(--transition-speed);
 }
 
 .sidebar li:hover {
@@ -83,26 +104,29 @@ body {
     background-color: rgba(78, 137, 255, 0.1);
 }
 
-/* Separator style */
+/* Separator */
 .sidebar-separator {
     height: 1px;
     background: var(--accentDim);
     margin: 20px 0;
     opacity: 0.5;
 }
+.btn {
+  @apply px-3 py-2 rounded bg-blue-500 text-white hover:bg-blue-600 transition;
+}
 
-/* Add Projects button styles */
+
+/* Add Projects Button */
 .add-project-btn {
     display: flex;
     align-items: center;
     justify-content: center;
     background: var(--accent);
     color: white;
-    text-decoration: none;
-    font-size: 16px;
+    font-size: 1rem;
     padding: 12px 15px;
-    border-radius: 8px;
-    transition: background 0.3s ease, transform 0.2s ease;
+    border-radius: var(--border-radius);
+    transition: background var(--transition-speed), transform 0.2s;
 }
 
 .add-project-btn:hover {
@@ -113,6 +137,8 @@ body {
 .add-project-btn i {
     margin-right: 8px;
 }
+
+/* Main Section */
 .main {
     flex: 1;
     padding: 30px;
@@ -120,6 +146,7 @@ body {
     flex-direction: column;
 }
 
+/* Header */
 .header {
     display: flex;
     justify-content: space-between;
@@ -127,21 +154,24 @@ body {
     margin-bottom: 30px;
 }
 
+/* Grid layout */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 25px;
 }
 
+/* Cards */
 .card {
     background-color: var(--card-bg);
+    color: white;
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
     display: flex;
     flex-direction: column;
     gap: 10px;
-    transition: transform 0.3s ease;
+    transition: transform var(--transition-speed);
 }
 
 .card:hover {
@@ -157,28 +187,26 @@ body {
     color: white;
     border: none;
     padding: 8px 12px;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: background-color var(--transition-speed);
 }
 
 .card button:hover {
     background-color: #3e70d1;
 }
 
+/* Theme switcher */
 .theme-switcher {
     cursor: pointer;
     font-size: 1.1rem;
 }
 
+/* Folder Path Label */
 .folderPath {
     font-size: 11px;
     color: var(--accentDim);
-    font-family: poppins;
-    display: block;
-    /* font-size: 0.875rem; */
-    /* color: #6b7280; */
-    /* Tailwind's gray-500 */
+    font-family: 'Poppins', sans-serif;
     margin: 0.5rem 0;
     word-wrap: break-word;
     overflow-wrap: break-word;
@@ -188,7 +216,7 @@ body {
     text-overflow: ellipsis;
 }
 
-/* Notification container */
+/* Notification */
 .notification {
     position: fixed;
     top: -100px;
@@ -202,7 +230,7 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     border-radius: 12px;
     z-index: 9999;
-    transition: top 0.4s ease;
+    transition: top 0.4s ease, opacity 0.4s ease;
     opacity: 0;
     pointer-events: none;
 }
@@ -238,7 +266,6 @@ body {
     from {
         width: 100%;
     }
-
     to {
         width: 0%;
     }

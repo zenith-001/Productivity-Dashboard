@@ -2,99 +2,79 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project Dashboard</title>
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-duotone-thin.css">
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-duotone-solid.css">
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-duotone-regular.css">
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-duotone-light.css">
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-thin.css">
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-solid.css">
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-regular.css">
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-light.css">
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone-thin.css">
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone-regular.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone-light.css">
-    <link rel="stylesheet" href="style.css">
-    <style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A productivity dashboard to manage tasks, projects, and resources efficiently." />
+  <meta name="keywords" content="Productivity, Dashboard, Task Management, Project Organizer, Links" />
+  <meta name="author" content="Zenith Kandel" />
+  <meta property="og:title" content="Productivity Dashboard by Zenith Kandel" />
+  <meta property="og:description" content="Organize your projects and tasks efficiently with this productivity dashboard." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://example.com/thumbnail.jpg" />
+  <meta property="og:url" content="https://example.com/dashboard" />
+  <link rel="canonical" href="https://example.com/dashboard" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
-    </style>
+  <title>Productivity Dashboard | Task & Project Manager</title>
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
-<body data-theme="light">
+<body data-theme="light" class="font-poppins">
+  <div class="container">
+    <!-- Sidebar -->
+     <div class="sidebar-placeholder"></div>
+    <nav class="sidebar" aria-label="Project and resource links">
+      <h1><i class="fas fa-tachometer-alt"></i> Productivity Dashboard</h1>
+      <ul id="project-list">
+        <li><a href="https://www.github.com" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a></li>
+        <li><a href="https://www.stackoverflow.com" target="_blank" rel="noopener"><i class="fa-brands fa-stack-overflow"></i> Stack Overflow</a></li>
+        <li><a href="https://www.fontawesome.com" target="_blank" rel="noopener"><i class="fa-brands fa-font-awesome"></i> Font Awesome</a></li>
+        <li><a href="https://fonts.google.com" target="_blank" rel="noopener"><i class="fa-regular fa-font-case"></i> Google Fonts</a></li>
+        <li><a href="https://www.chatgpt.com" target="_blank" rel="noopener"><i class="fa-light fa-brain-circuit"></i> ChatGPT</a></li>
+        <li><a href="https://chat.deepseek.com" target="_blank" rel="noopener"><i class="fa-light fa-microchip"></i> DeepSeek</a></li>
+        <li><a href="https://www.photopea.com" target="_blank" rel="noopener"><i class="fa-regular fa-image"></i> Photopea</a></li>
+        <li><a href="https://www.monkeytype.com" target="_blank" rel="noopener"><i class="fa-regular fa-keyboard"></i> Monkeytype</a></li>
+        <li><a href="https://www.register.com.np" target="_blank" rel="noopener"><i class="fa-regular fa-globe"></i> Mercantile Domain</a></li>
+        <li><a href="https://www.himalayanhost.com" target="_blank" rel="noopener"><i class="fa-regular fa-globe"></i> Himalayan Host</a></li>
+        <li><a href="folder.php?path=C:/xampp/htdocs"><i class="fa-regular fa-folder"></i> htdocs</a></li>
+        <li><a href="folder.php?code=C:/xampp/htdocs/codes"><i class="fa-regular fa-folder"></i> VScode</a></li>
+        <li>
+          <button onclick="copyVar(boiler_template);showNotification('<i class=\'fa-regular fa-copy\'></i> Copied To Clipboard');" aria-label="Copy HTML Boilerplate">
+            <i class="fa-regular fa-copy"></i> HTML Boiler
+          </button>
+        </li>
+      </ul>
 
-    <div id="notification" class="notification">
-        <button class="close-btn" onclick="dismissNotification()">×</button>
-        <div>This is a cool notification popup!</div>
-        <div class="countdown-bar"></div>
-    </div>
+      <hr class="sidebar-separator" />
 
-    <div class="container">
-        <div class="sidebar-placeholder"></div>
-        <div class="sidebar">
-            <div>
-                <h2><i class="fas fa-tachometer-alt"></i> Dashboard</h2>
-                <ul id="project-list">
-                    <li onclick="location.href='https://www.github.com'"><i class="fa-brands fa-github"></i> Github</li>
-                    <li onclick="location.href='https://www.stackoverflow.com'"><i
-                            class="fa-brands fa-stack-overflow"></i> Stackoverflow</li>
-                    <li onclick="location.href='https://www.fontawesome.com'"><i class="fa-brands fa-font-awesome"></i>
-                        Fontawesome</li>
-                    <li onclick="location.href='https://fonts.google.com'"><i class="fa-regular fa-font-case"></i>
-                        Google Fonts</li>
-                    <li onclick="location.href='https://www.chatgpt.com'"><i class="fa-light fa-brain-circuit"></i>
-                        ChatGPT</li>
-                    <li onclick="location.href='https://chat.deepseek.com'"><i class="fa-light fa-microchip"></i>
-                        Deepseek</li>
-                    <li onclick="location.href='https://www.photopea.com'"><i class="fa-regular fa-image"></i> Photopea
-                    </li>
-                    <li onclick="location.href='https://www.monkeytype.com'"><i class="fa-regular fa-keyboard"></i>
-                        Monkeytype</li>
-                    <li onclick="location.href='https://www.register.com.np'"><i class="fa-regular fa-globe"></i>
-                        Mercantile Domain</li>
-                    <li onclick="location.href='https://www.himalayanhost.com'"><i class="fa-regular fa-globe"></i>
-                        Himalayan Host</li>
-                    <li onclick="location.href='folder.php?path='+encodeURIComponent('C:/xampp/htdocs')"><i
-                            class="fa-regular fa-folder"></i> htdocs</li>
-                    <li onclick="location.href='folder.php?code='+encodeURIComponent('C:/xampp/htdocs/codes')"><i
-                            class="fa-regular fa-folder"></i> Vscode</li>
-                    <li
-                        onclick="copyVar(boiler_template);showNotification(`<i class='fa-regular fa-copy'></i> Copied To Clipboard`);">
-                        <i class="fa-regular fa-copy"></i> HTML Boiler
-                    </li>
-                </ul>
-            </div>
+      <a href="add.php" class="add-project-btn" aria-label="Add New Project">
+        <i class="fa-regular fa-plus"></i> Add Project
+      </a>
+    </nav>
 
-            <!-- Separator -->
-            <div class="sidebar-separator"></div>
-
-            <!-- Add Projects Button -->
-            <a href="add.php" class="add-project-btn">
-                <i class="fa-regular fa-plus"></i> Add Projects
-            </a>
+    <!-- Main Content -->
+    <main class="main">
+      <header class="header">
+        <h2><i class="fas fa-tasks"></i> Project Manager</h2>
+        <div>
+          <button class="theme-switcher" onclick="toggleTheme()" aria-label="Toggle Theme">
+            <i id="theme-icon" class="fas fa-sun-bright"></i>
+          </button>
+          <span><i class="fas fa-user"></i> Zenith</span>
         </div>
-        <div class="main">
-            <div class="header">
-                <h2><i class="fas fa-tasks"></i> Project Manager</h2>
-                <div>
-                    <span class="theme-switcher" onclick="toggleTheme()">
-                        <i id="theme-icon" class="fas fa-sun-bright"></i>
-                    </span>
-                    <span style="margin-left: 10px;"><i class="fas fa-user"></i>&nbsp;Zenith</span>
-                </div>
-            </div>
-            <div class="grid" id="todo-grid"></div>
-        </div>
-    </div>
-    <script src="script.js" type="text/javascript"></script>
+      </header>
+
+      <section class="grid" id="todo-grid" aria-label="Project List Section">
+        <!-- Dynamic task cards go here -->
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
