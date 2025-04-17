@@ -23,7 +23,7 @@ fetch("projects.json")
   .then((projects) => {
     projects.forEach((project) => {
       const card = document.createElement("div");
-      card.classList = "p-4 bg-white dark:bg-gray-800 shadow-md rounded-xl mb-4 card";
+      card.classList = "p-4 shadow-md rounded-xl mb-4 card";
       card.innerHTML = `
         <h4 class="text-xl font-bold mb-2">${project.name}</h4>
         <p><i class="fa-regular fa-id-card"></i> ${project.author}</p>
